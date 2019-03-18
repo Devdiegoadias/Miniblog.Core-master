@@ -17,6 +17,7 @@ namespace Miniblog.Core.Services
         public bool ValidateUser(string username, string password)
         {
             return username == _config["user:username"] && VerifyHashedPassword(password, _config);
+
         }
 
         private bool VerifyHashedPassword(string password, IConfiguration config)
